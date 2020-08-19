@@ -26,6 +26,10 @@ body {
     transition: transform 0.4s linear 0.1s;
 }
 
+#uwp-btn.hide-outline:focus {
+    outline: none;
+}
+
 #uwp-border {
     width: max-content;
     font-size: 14px;

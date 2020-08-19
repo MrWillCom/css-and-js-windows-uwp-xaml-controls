@@ -34,6 +34,14 @@ function clearRotate3d(e) {
     uwpBtn.style.transform = "";
 }
 
+function setOutlineShow(show) {
+    if (show) {
+        uwpBtn.classList.remove('hide-outline');
+    } else {
+        uwpBtn.classList.add('hide-outline');
+    }
+}
+
 function addHoverBorder(e) {
     uwpBtnBorder.classList.add("hover");
 }
@@ -58,11 +66,14 @@ function hideReveal(e) {
 uwpBtn.onmousedown = (e) => {
     clickRotate3d(e);
     clearHoverBorder(e);
+    setOutlineShow(false);
 };
 
 uwpBtn.onmouseup = (e) => {
     clearRotate3d(e);
     addHoverBorder(e);
+    setOutlineShow(true);
+    uwpBtn.blur();
 };
 
 uwpBtn.onmouseenter = (e) => {
@@ -74,6 +85,7 @@ uwpBtn.onmouseleave = (e) => {
     clearRotate3d(e);
     clearHoverBorder(e);
     hideReveal(e);
+    setOutlineShow(true);
 };
 
 uwpBtn.onmousemove = (e) => {

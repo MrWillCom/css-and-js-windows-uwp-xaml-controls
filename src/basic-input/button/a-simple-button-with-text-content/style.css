@@ -12,7 +12,7 @@ body {
     border-radius: 4px;
     background-color: #cccccc;
     overflow: hidden;
-    transition: all 0.02s linear 0s;
+    transition: transform 0.02s linear 0s;
     outline: none;
     border: none;
     padding: 0;
@@ -23,7 +23,11 @@ body {
 }
 
 #uwp-btn.click {
-    transition: all 0.4s linear 0.1s;
+    transition: transform 0.4s linear 0.1s;
+}
+
+#uwp-btn.hide-outline:focus {
+    outline: none;
 }
 
 #uwp-border {

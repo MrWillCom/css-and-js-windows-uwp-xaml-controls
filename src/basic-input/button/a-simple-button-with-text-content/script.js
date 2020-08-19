@@ -33,19 +33,30 @@ function setClick(listener) {
     mousedownFunc = listener;
 }
 
+function setOutlineShow(show) {
+    if (show) {
+        uwpBtn.classList.remove('hide-outline');
+    } else {
+        uwpBtn.classList.add('hide-outline');
+    }
+}
+
 uwpBtn.onmousedown = (e) => {
     clickRotate3d(e);
+    setOutlineShow(false);
 };
 
 uwpBtn.onmouseup = (e) => {
     clearRotate3d(e);
-
+    setOutlineShow(true);
+    uwpBtn.blur();
 };
 
 uwpBtn.onmouseenter = (e) => { };
 
 uwpBtn.onmouseleave = (e) => {
     clearRotate3d(e);
+    setOutlineShow(true);
 };
 
 uwpBtn.onmousemove = (e) => { };
