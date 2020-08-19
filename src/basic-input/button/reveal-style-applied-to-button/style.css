@@ -45,6 +45,10 @@ body {
     border: 1px solid #888;
 }
 
+#uwp-border:hover+#uwp-reveal-highlight {
+    opacity: 1;
+}
+
 #uwp-reveal-highlight {
     opacity: 0;
     pointer-events: none;
@@ -53,10 +57,11 @@ body {
     width: 256px;
     height: 256px;
     background-image: radial-gradient(#fff2, #fff0, transparent);
+    transition: transform 4s linear 0s, background-image 4s linear 0s;
 }
 
-#uwp-reveal-highlight.show {
-    opacity: 1;
+#uwp-reveal-highlight.fast {
+    transition: transform 0.3s linear 0s, background-image 0.3s linear 0s;
 }
 
 @media (prefers-color-scheme: dark) {
