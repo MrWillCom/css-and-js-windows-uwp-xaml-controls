@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+#uwp-btn {
+    color: #222;
+    border-radius: 4px;
+    background-color: #cccccc;
+    overflow: hidden;
+    transition: all 0.02s linear 0s;
+}
+
+#uwp-btn.click {
+    transition: all 0.4s linear 0.1s;
+}
+
+#uwp-border {
+    font-size: 14px;
+    padding: calc(6px + 1px) calc(8px + 1px);
+    user-select: none;
+    display: grid;
+    place-items: center;
+    border-radius: 4px;
+}
+
+#uwp-border:hover {
+    background-color: #e6e6e6;
+}
+
+#uwp-border:active {
+    background-color: #999999;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #000;
+    }
+    #uwp-btn {
+        background-color: #2f2f2f;
+        color: #d8d8d8;
+    }
+    #uwp-border:hover {
+        background-color: #191919;
+    }
+    #uwp-border:active {
+        background-color: #666666;
+    }
+}
