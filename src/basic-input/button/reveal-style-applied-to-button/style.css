@@ -10,7 +10,7 @@ body {
 #uwp-btn {
     color: #222;
     border-radius: 4px;
-    background-color: #cccccc;
+    background-color: #d2d2d2;
     overflow: hidden;
     transition: all 0.02s linear 0s;
 }
@@ -20,6 +20,7 @@ body {
 }
 
 #uwp-border {
+    width: max-content;
     font-size: 14px;
     padding: calc(6px + 1px) calc(8px + 1px);
     user-select: none;
@@ -28,12 +29,23 @@ body {
     border-radius: 4px;
 }
 
-#uwp-border:hover {
-    background-color: #e6e6e6;
+#uwp-border.hover {
+    padding: calc(6px + 0px) calc(8px + 0px);
+    border: 1px solid #888;
 }
 
-#uwp-border:active {
-    background-color: #999999;
+#uwp-reveal-highlight {
+    opacity: 0;
+    pointer-events: none;
+    position: relative;
+    transform: translate(-128px, -128px);
+    width: 256px;
+    height: 256px;
+    background-image: radial-gradient(#fff2, #fff0, transparent);
+}
+
+#uwp-reveal-highlight.show {
+    opacity: 1;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -43,11 +55,5 @@ body {
     #uwp-btn {
         background-color: #2f2f2f;
         color: #d8d8d8;
-    }
-    #uwp-border:hover {
-        background-color: #191919;
-    }
-    #uwp-border:active {
-        background-color: #666666;
     }
 }

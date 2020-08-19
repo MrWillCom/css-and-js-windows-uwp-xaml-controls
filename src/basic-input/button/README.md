@@ -6,4 +6,10 @@ The Button control provides a Click event to respond to user input from a touch,
 
 - [Live Demo](https://mrwillcom.github.io/css-and-js-microsoft-uwp-xaml-controls/src/basic-input/button/a-simple-button-with-text-content/)
 - [CodePen](https://codepen.io/mrwillcom/pen/qBZaOmq)
-- [Source Code](a-simple-button-with-text-content/)
+- [Source Code](./a-simple-button-with-text-content/)
+
+## Reveal style applied to Button.
+
+- [Live Demo](https://mrwillcom.github.io/css-and-js-microsoft-uwp-xaml-controls/src/basic-input/button/reveal-style-applied-to-button/)
+- [CodePen](https://codepen.io/mrwillcom/pen/mdPEPxm)
+- [Source Code](./reveal-style-applied-to-button/)

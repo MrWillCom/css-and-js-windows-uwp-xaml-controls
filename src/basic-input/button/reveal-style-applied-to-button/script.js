@@ -1,4 +1,9 @@
 var uwpBtn = document.getElementById("uwp-btn");
+var uwpBtnBorder = document.getElementById("uwp-border");
+var uwpBtnReveal = document.getElementById("uwp-reveal-highlight");
+
+uwpBtn.style.width = uwpBtnBorder.clientWidth + "px"
+uwpBtn.style.height = uwpBtnBorder.clientHeight + "px"
 
 function clickRotate3d(e) {
     uwpBtn.classList.remove("click");
@@ -21,7 +26,7 @@ function clickRotate3d(e) {
         rotateDeg.x +
         "deg) rotateY(" +
         rotateDeg.y +
-        "deg) scale3d(0.97, 0.97, 0.97)";
+        "deg) scale3d(0.95, 0.95, 0.95)";
 }
 
 function clearRotate3d(e) {
@@ -29,26 +34,51 @@ function clearRotate3d(e) {
     uwpBtn.style.transform = "";
 }
 
-function setClick(listener) {
-    mousedownFunc = listener;
+function addHoverBorder(e) {
+    uwpBtnBorder.classList.add("hover");
+}
+
+function clearHoverBorder(e) {
+    uwpBtnBorder.classList.remove("hover");
+}
+
+function placeReveal(e) {
+    uwpBtnReveal.style.left = e.offsetX + "px";
+    uwpBtnReveal.style.top = e.offsetY + "px";
+}
+
+function showReveal(e) {
+    uwpBtnReveal.classList.add("show");
+}
+
+function hideReveal(e) {
+    uwpBtnReveal.classList.remove("show");
 }
 
 uwpBtn.onmousedown = (e) => {
     clickRotate3d(e);
+    clearHoverBorder(e);
 };
 
 uwpBtn.onmouseup = (e) => {
     clearRotate3d(e);
-
+    addHoverBorder(e);
 };
 
-uwpBtn.onmouseenter = (e) => { };
+uwpBtn.onmouseenter = (e) => {
+    addHoverBorder(e);
+    showReveal(e);
+};
 
 uwpBtn.onmouseleave = (e) => {
     clearRotate3d(e);
+    clearHoverBorder(e);
+    hideReveal(e);
 };
 
-uwpBtn.onmousemove = (e) => { };
+uwpBtn.onmousemove = (e) => {
+    placeReveal(e);
+};
 
 uwpBtn.onclick = (e) => {
     console.log(e)
