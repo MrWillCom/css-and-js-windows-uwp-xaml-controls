@@ -12,11 +12,18 @@ body {
     border-radius: 4px;
     background-color: #d2d2d2;
     overflow: hidden;
-    transition: all 0.02s linear 0s;
+    transition: transform 0.02s linear 0s;
+    outline: none;
+    border: none;
+    padding: 0;
+}
+
+#uwp-btn:focus {
+    outline: 2px solid #000;
 }
 
 #uwp-btn.click {
-    transition: all 0.4s linear 0.1s;
+    transition: transform 0.4s linear 0.1s;
 }
 
 #uwp-border {
@@ -55,5 +62,8 @@ body {
     #uwp-btn {
         background-color: #2f2f2f;
         color: #d8d8d8;
+    }
+    #uwp-btn:focus {
+        outline: 2px solid #fff;
     }
 }

@@ -13,6 +13,13 @@ body {
     background-color: #cccccc;
     overflow: hidden;
     transition: all 0.02s linear 0s;
+    outline: none;
+    border: none;
+    padding: 0;
+}
+
+#uwp-btn:focus {
+    outline: 2px solid #000;
 }
 
 #uwp-btn.click {
@@ -43,6 +50,9 @@ body {
     #uwp-btn {
         background-color: #2f2f2f;
         color: #d8d8d8;
+    }
+    #uwp-btn:focus {
+        outline: 2px solid #fff;
     }
     #uwp-border:hover {
         background-color: #191919;
